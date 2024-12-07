@@ -41,8 +41,8 @@
             label = "Base";
             bindings = <
                 &mt_l LA(LG(Q)) Q         &mt_l LA(LG(W)) W         &mt_l LA(LG(E)) E         &mt_l LA(LG(R)) R         &mt_l LA(LG(T)) T                       &mt_l LA(LG(Y)) Y         &mt_l LA(LG(U)) U         &mt_l LA(LG(I)) I         &mt_l LA(LG(O)) O         &mt_l LA(LG(P)) P
-                &mt LGUI A                &mt LALT S                &mt LCTRL D               &mt LSHIFT F              &mt_l LC(LG(T)) G                       &mt_l LS(LG(SPACE)) H              &mt RSHIFT J             &mt RCTRL K               &mt RALT L               &mt RGUI SEMICOLON
-                &kp Z                     &mt_l LG(X) X             &mt_l LG(C) C             &mt_l LG(V) V             &mt_l LG(B) B                           &mt_l LS(LG(N)) N  &kp M                   &mt_l LS(COMMA) COMMA     &mt_l LS(DOT) DOT        &mt_l LS(SLASH) SLASH
+                &mt_l LGUI A                &mt_l LALT S                &mt_l LCTRL D               &mt_l LSHIFT F              &mt_l LC(LG(T)) G                       &mt_l LS(LG(SPACE)) H              &mt_l RSHIFT J             &mt_l RCTRL K               &mt_l RALT L               &mt_l RGUI SEMICOLON
+                &kp Z                     &mt_l LG(X) X             &mt_l LG(C) C             &mt_l LG(V) V             &mt_l LG(B) B                           &mt_l LS(LG(N)) N  &mt_l BACKSPACE M               &mt_l LS(COMMA) COMMA     &mt_l LS(DOT) DOT        &mt_l LS(SLASH) SLASH
                                                               &lt 1 SPACE     &lt 2 TAB   &lt 3 ENTER                      &lt 4 BACKSPACE
             >;
         };
