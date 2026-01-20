@@ -9,6 +9,7 @@
 #define FUNCTION 3
 #define SYMBOL 4
 #define SETTINGS 5
+#define INTELLIJ 6
 
 / {
     behaviors {
@@ -31,6 +32,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
+        };
+
+        // Double shift for IntelliJ Search Everywhere
+        search_all: search_all {
+            label = "ZM_search_all";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT &kp LSHIFT>;
         };
     };
 
@@ -60,7 +69,7 @@
         nav_layer {
             label = "Nav";
             bindings = <
-                &none &none &none &none &none                                              &none &none &none &none &none
+                &none &none &none &none &tog INTELLIJ                                      &none &none &none &none &none
                 &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none                                &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
                 &none    &kp RALT &none    &none      &none                                &none   &none     &none  &none     &none
                                                        &none      &trans    &kp ESC                                   &mo 5
@@ -80,8 +89,8 @@
         symbol_layer {
             label = "Symbol";
             bindings = <
-                &kp EXCLAMATION        &kp AT_SIGN            &kp LBRC                      &kp RBRC                  &kp PIPE                 &none     &none      &none     &none    &none
-                &kp QUESTION           &mt_l DOLLAR AMPERSAND &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS     &mt_l GRAVE SINGLE_QUOTE &none     &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI
+                &kp EXCLAMATION        &kp AT_SIGN            &kp LBRC                      &kp RBRC                  &kp GRAVE                &kp PIPE      &none      &none     &none    &none
+                &kp QUESTION           &mt_l DOLLAR AMPERSAND &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS     &kp SINGLE_QUOTE         &none     &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI
                 &kp PERCENT            &kp CARET              &mt_l LEFT_BRACKET UNDERSCORE &mt_l RIGHT_BRACKET MINUS &mt_l TILDE DOUBLE_QUOTES &none     &none      &none     &kp LALT &none
                 &mt_l BACKSLASH  EQUAL &kp LS(N3)             &none                         &trans
             >;
@@ -94,6 +103,16 @@
                 &none &none &none &none      &bt BT_SEL 1            &bt BT_SEL 4 &none &none &none &none
                 &none &none &none &none      &bt BT_SEL 2            &bt BT_SEL 5 &none &none &none &none
                                                &none &none           &none &none
+            >;
+        };
+        
+        intellij_layer {
+            label = "IntelliJ";
+            bindings = <
+                &kp LG(N1)   &kp LG(N7)   &kp LC(R)    &kp LC(D)    &kp LG(E)             &kp LG(LBKT)  &kp LG(RBKT) &kp LG(B)    &kp LG(N)     &kp LA(ENTER)
+                &kp LG(Z)    &kp LS(LG(Z)) &kp LG(SLASH) &kp LS(LG(F)) &search_all        &kp LEFT      &kp DOWN     &kp UP       &kp RIGHT     &kp LS(F6)
+                &kp LG(C)    &kp LG(V)    &kp LG(X)    &kp LG(D)    &kp LG(F)             &kp LA(F7)    &kp LG(F12)  &kp LA(LG(L)) &kp LG(W)    &kp LG(O)
+                                                       &trans       &trans       &trans       &trans
             >;
         };
     };
