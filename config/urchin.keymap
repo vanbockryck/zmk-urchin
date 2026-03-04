@@ -40,7 +40,7 @@
         default_layer {
             label = "Base";
             bindings = <
-                &mt_l LA(LG(Q)) Q         &mt_l LA(LG(W)) W         &mt_l LA(LG(E)) E         &mt_l LA(LG(R)) R         &mt_l LA(LG(T)) T                       &mt_l LA(LG(Y)) Y         &mt_l LA(LG(U)) U         &mt_l LA(LG(I)) I         &mt_l LA(LG(O)) O         &mt_l LA(LG(P)) P
+                &mt_l LG(N1) Q            &mt_l LG(N2) W            &mt_l LG(N3) E            &mt_l LG(N4) R            &mt_l LG(N5) T                          &mt_l LG(N6) Y            &mt_l LG(N7) U            &mt_l LG(N8) I            &mt_l LG(N9) O            &mt_l LG(N0) P
                 &mt_l LGUI A                &mt_l LALT S                &mt_l LCTRL D               &mt_l LSHIFT F              &mt_l LC(LG(T)) G                       &mt_l LS(LG(SPACE)) H              &mt_l RSHIFT J             &mt_l RCTRL K               &mt_l RALT L               &mt_l RGUI SEMICOLON
                 &kp Z                     &mt_l LG(X) X             &mt_l LG(C) C             &mt_l LG(V) V             &mt_l LG(B) B                           &mt_l LS(LG(N)) N  &mt_l BACKSPACE M               &mt_l LS(COMMA) COMMA     &mt_l LS(DOT) DOT        &mt_l LS(SLASH) SLASH
                                                               &lt 1 SPACE     &lt 2 TAB   &lt 3 ENTER                      &lt 4 BACKSPACE
@@ -81,7 +81,7 @@
             label = "Symbol";
             bindings = <
                 &kp EXCLAMATION        &kp AT_SIGN            &kp LBRC                      &kp RBRC                  &kp PIPE                 &none     &none      &none     &none    &none
-                &kp QUESTION           &mt_l DOLLAR AMPERSAND &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS     &mt_l GRAVE SINGLE_QUOTE &none     &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI
+                &kp QUESTION           &mt_l DOLLAR AMPERSAND &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS     &mt_l SINGLE_QUOTE GRAVE &none     &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI
                 &kp PERCENT            &kp CARET              &mt_l LEFT_BRACKET UNDERSCORE &mt_l RIGHT_BRACKET MINUS &mt_l TILDE DOUBLE_QUOTES &none     &none      &none     &kp LALT &none
                 &mt_l BACKSLASH  EQUAL &kp LS(N3)             &none                         &trans
             >;
