@@ -41,8 +41,8 @@
             label = "Base";
             bindings = <
                 &mt_l LG(N1) Q            &mt_l LG(N2) W            &mt_l LG(N3) E            &mt_l LG(N4) R            &mt_l LG(N5) T                          &mt_l LG(N6) Y            &mt_l LG(N7) U            &mt_l LG(N8) I            &mt_l LG(N9) O            &mt_l LG(N0) P
-                &mt_l LGUI A                &mt_l LALT S                &mt_l LCTRL D               &mt_l LSHIFT F              &mt_l LC(LG(T)) G                       &mt_l LS(LG(SPACE)) H              &mt_l RSHIFT J             &mt_l RCTRL K               &mt_l RALT L               &mt_l RGUI SEMICOLON
-                &kp Z                     &mt_l LG(X) X             &mt_l LG(C) C             &mt_l LG(V) V             &mt_l LG(B) B                           &mt_l LS(LG(N)) N  &mt_l BACKSPACE M               &mt_l LS(COMMA) COMMA     &mt_l LS(DOT) DOT        &mt_l LS(SLASH) SLASH
+                &mt_l LGUI A                &mt_l LALT S                &mt_l LCTRL D               &mt_l LSHIFT F              &mt_l LG(ENTER) G                            &mt_l LG(D) H                      &mt_l RSHIFT J             &mt_l RCTRL K               &mt_l RALT L               &mt_l RGUI SEMICOLON
+                &kp Z                     &mt_l LCTRL(X) X             &mt_l LCTRL(C) C             &mt_l LCTRL(V) V             &mt_l LS(B) B                           &mt_l LS(N) N  &mt_l BACKSPACE M               &mt_l LS(COMMA) COMMA     &mt_l LG(DOT) DOT      &mt_l LS(SLASH) SLASH
                                                               &lt 1 SPACE     &lt 2 TAB   &lt 3 ENTER                      &lt 4 BACKSPACE
             >;
         };
@@ -50,10 +50,10 @@
         numpad_layer {
             label = "Numpad";
             bindings = <
-                &none         &none        &none        &none        &none                 &kp KP_MINUS  &kp KP_N7      &kp KP_N8      &kp KP_N9     &kp KP_DIVIDE
-                &kp LGUI      &kp LALT     &kp LCTRL    &kp LSHIFT   &none                 &kp KP_PLUS   &kp KP_N4      &kp KP_N5      &kp KP_N6     &kp KP_ASTERISK
-                &none         &kp RALT     &none        &none        &none                 &kp KP_EQUAL  &kp KP_N1      &kp KP_N2      &kp KP_N3     &kp COMMA
-                                                   &trans       &none       &kp KP_DOT                                &kp KP_N0
+                &none         &none        &none        &none        &none                 &kp KP_MINUS  &kp N7      &kp N8      &kp N9     &kp KP_DIVIDE
+                &kp LGUI      &kp LALT     &kp LCTRL    &kp LSHIFT   &none                 &kp KP_PLUS   &kp N4      &kp N5      &kp N6     &kp KP_ASTERISK
+                &none         &kp RALT     &none        &none        &none                 &kp KP_EQUAL  &kp N1      &kp N2      &kp N3     &kp COMMA
+                                                   &trans       &none       &kp KP_DOT                                &kp N0
             >;
         };
 
