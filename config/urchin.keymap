@@ -42,7 +42,7 @@
             bindings = <
                 &mt_l LG(N1) Q      &mt_l LG(N2) W      &mt_l LG(N3) E      &mt_l LG(N4) R      &mt_l LG(N5) T      &mt_l LG(N6) Y      &mt_l LG(N7) U      &mt_l LG(N8) I      &mt_l LG(N9) O       &mt_l LG(N0) P
                 &mt_l LGUI A        &mt_l LALT S        &mt_l LCTRL D       &mt_l LSHIFT F      &mt_l LG(ENTER) G   &mt_l LG(D) H       &mt_l RSHIFT J      &mt_l RCTRL K       &mt_l RALT L         &mt_l RGUI SEMICOLON
-                &kp Z               &mt_l LCTRL(X) X    &mt_l LCTRL(C) C    &mt_l LCTRL(V) V    &mt_l LS(B) B       &mt_l LS(N) N       &mt_l BACKSPACE M   &mt_l LS(COMMA) COMMA &mt_l LG(DOT) DOT  &mt_l LS(SLASH) SLASH
+                &kp Z               &mt_l LC(X) X       &mt_l LC(C) C       &mt_l LC(V) V       &mt_l LS(B) B       &mt_l LS(N) N       &mt_l BACKSPACE M   &mt_l LS(COMMA) COMMA &mt_l LG(DOT) DOT  &mt_l LS(SLASH) SLASH
                                                         &lt NUMPAD SPACE     &lt NAV TAB          &lt FUNCTION ENTER    &lt SYMBOL BACKSPACE
             >;
         };
