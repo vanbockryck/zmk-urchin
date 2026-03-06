@@ -24,8 +24,8 @@
     };
 
     macros {
-        // sometimes my device thinks a modifier is being held down
-        // pressing all modifiers fixes it.
+        // Sometimes the device thinks a modifier is stuck.
+        // Pressing all modifiers clears the state.
         unstick: unstick {
             label = "ZM_unstick";
             compatible = "zmk,behavior-macro";
@@ -40,60 +40,60 @@
         default_layer {
             label = "Base";
             bindings = <
-                &mt_l LG(N1) Q            &mt_l LG(N2) W            &mt_l LG(N3) E            &mt_l LG(N4) R            &mt_l LG(N5) T                          &mt_l LG(N6) Y            &mt_l LG(N7) U            &mt_l LG(N8) I            &mt_l LG(N9) O            &mt_l LG(N0) P
-                &mt_l LGUI A                &mt_l LALT S                &mt_l LCTRL D               &mt_l LSHIFT F              &mt_l LG(ENTER) G                            &mt_l LG(D) H                      &mt_l RSHIFT J             &mt_l RCTRL K               &mt_l RALT L               &mt_l RGUI SEMICOLON
-                &kp Z                     &mt_l LCTRL(X) X             &mt_l LCTRL(C) C             &mt_l LCTRL(V) V             &mt_l LS(B) B                           &mt_l LS(N) N  &mt_l BACKSPACE M               &mt_l LS(COMMA) COMMA     &mt_l LG(DOT) DOT      &mt_l LS(SLASH) SLASH
-                                                              &lt 1 SPACE     &lt 2 TAB   &lt 3 ENTER                      &lt 4 BACKSPACE
+                &mt_l LG(N1) Q      &mt_l LG(N2) W      &mt_l LG(N3) E      &mt_l LG(N4) R      &mt_l LG(N5) T      &mt_l LG(N6) Y      &mt_l LG(N7) U      &mt_l LG(N8) I      &mt_l LG(N9) O       &mt_l LG(N0) P
+                &mt_l LGUI A        &mt_l LALT S        &mt_l LCTRL D       &mt_l LSHIFT F      &mt_l LG(ENTER) G   &mt_l LG(D) H       &mt_l RSHIFT J      &mt_l RCTRL K       &mt_l RALT L         &mt_l RGUI SEMICOLON
+                &kp Z               &mt_l LCTRL(X) X    &mt_l LCTRL(C) C    &mt_l LCTRL(V) V    &mt_l LS(B) B       &mt_l LS(N) N       &mt_l BACKSPACE M   &mt_l LS(COMMA) COMMA &mt_l LG(DOT) DOT  &mt_l LS(SLASH) SLASH
+                                                        &lt NUMPAD SPACE     &lt NAV TAB          &lt FUNCTION ENTER    &lt SYMBOL BACKSPACE
             >;
         };
 
         numpad_layer {
             label = "Numpad";
             bindings = <
-                &none         &none        &none        &none        &none                 &kp KP_MINUS  &kp N7      &kp N8      &kp N9     &kp KP_DIVIDE
-                &kp LGUI      &kp LALT     &kp LCTRL    &kp LSHIFT   &none                 &kp KP_PLUS   &kp N4      &kp N5      &kp N6     &kp KP_ASTERISK
-                &none         &kp RALT     &none        &none        &none                 &kp KP_EQUAL  &kp N1      &kp N2      &kp N3     &kp COMMA
-                                                   &trans       &none       &kp KP_DOT                                &kp N0
+                &none      &none    &none     &none      &none    &kp KP_MINUS  &kp N7  &kp N8  &kp N9  &kp KP_DIVIDE
+                &kp LGUI   &kp LALT &kp LCTRL &kp LSHIFT &none    &kp KP_PLUS   &kp N4  &kp N5  &kp N6  &kp KP_ASTERISK
+                &none      &kp RALT &none     &none      &none    &kp KP_EQUAL  &kp N1  &kp N2  &kp N3  &kp COMMA
+                                        &trans &none      &kp KP_DOT                     &kp N0
             >;
         };
 
         nav_layer {
             label = "Nav";
             bindings = <
-                &none &none &none &none &none                                              &none &none &none &none &none
-                &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none                                &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
-                &none    &kp RALT &none    &none      &none                                &none   &none     &none  &none     &none
-                                                       &none      &trans    &kp ESC                                   &mo 5
+                &none    &none    &none    &none    &none    &none     &none     &none   &none      &none
+                &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &none  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none
+                &none    &kp RALT &none    &none    &none    &none     &none     &none   &none      &none
+                                               &none    &trans    &kp ESC                     &mo SETTINGS
             >;
         };
 
         function_layer {
             label = "Function";
             bindings = <
-                &kp F12       &kp F7       &kp F8       &kp F9       &kp C_VOL_UP          &none       &none       &none       &none       &none
-                &kp F11       &kp F4       &kp F5       &kp F6       &kp C_VOL_DN          &none       &kp RSHIFT  &kp RCTRL   &kp RALT    &kp RGUI
-                &kp F10       &kp F1       &kp F2       &kp F3       &kp C_PREV            &none       &none       &none       &kp LALT    &none
-                                                    &kp C_PP    &kp C_NEXT  &trans                                  &none
+                &kp F12  &kp F7  &kp F8  &kp F9  &kp C_VOL_UP  &none  &none      &none      &none    &none
+                &kp F11  &kp F4  &kp F5  &kp F6  &kp C_VOL_DN  &none  &kp RSHIFT &kp RCTRL  &kp RALT &kp RGUI
+                &kp F10  &kp F1  &kp F2  &kp F3  &kp C_PREV    &none  &none      &none      &kp LALT &none
+                                    &kp C_PP &kp C_NEXT         &trans                        &none
             >;
         };
 
         symbol_layer {
             label = "Symbol";
             bindings = <
-                &kp EXCLAMATION        &kp AT_SIGN            &kp LBRC                      &kp RBRC                  &kp PIPE                 &none     &none      &none     &none    &none
-                &kp QUESTION           &mt_l DOLLAR AMPERSAND &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS     &mt_l SINGLE_QUOTE GRAVE &none     &kp RSHIFT &kp RCTRL &kp RALT &kp RGUI
-                &kp PERCENT            &kp CARET              &mt_l LEFT_BRACKET UNDERSCORE &mt_l RIGHT_BRACKET MINUS &mt_l TILDE DOUBLE_QUOTES &none     &none      &none     &kp LALT &none
-                &mt_l BACKSLASH  EQUAL &kp LS(N3)             &none                         &trans
+                &kp EXCLAMATION       &kp AT_SIGN             &kp LBRC                      &kp RBRC                    &kp PIPE                      &none  &none      &none      &none    &none
+                &kp QUESTION          &mt_l DOLLAR AMPERSAND &kp LEFT_PARENTHESIS          &kp RIGHT_PARENTHESIS       &mt_l SINGLE_QUOTE GRAVE      &none  &kp RSHIFT &kp RCTRL  &kp RALT &kp RGUI
+                &kp PERCENT           &kp CARET               &mt_l LEFT_BRACKET UNDERSCORE &mt_l RIGHT_BRACKET MINUS   &mt_l TILDE DOUBLE_QUOTES     &none  &none      &none      &kp LALT &none
+                &mt_l BACKSLASH EQUAL &kp LS(N3)              &none                         &trans
             >;
         };
 
         settings_layer {
             label = "Settings";
             bindings = <
-                &bootloader &none &none &bt BT_CLR &bt BT_SEL 0      &bt BT_SEL 3 &none &unstick &none &bootloader
-                &none &none &none &none      &bt BT_SEL 1            &bt BT_SEL 4 &none &none &none &none
-                &none &none &none &none      &bt BT_SEL 2            &bt BT_SEL 5 &none &none &none &none
-                                               &none &none           &none &none
+                &bootloader &none &none &bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 3  &none &unstick &none &bootloader
+                &none       &none &none &none      &bt BT_SEL 1  &bt BT_SEL 4  &none &none    &none &none
+                &none       &none &none &none      &bt BT_SEL 2  &bt BT_SEL 5  &none &none    &none &none
+                                        &none &none            &none           &none
             >;
         };
     };
